@@ -1,0 +1,60 @@
+﻿@model BOCS.ModelsView.LessonManageVM
+@{
+    ViewData["Title"] = "Manage Lessons";
+}
+<section class="container py-4">
+    <h4 class="mb-3">@Model.CourseTitle — Lessons</h4>
+
+    @if (TempData["StatusMessage"] is string m)
+    {
+        <div class="alert alert-success py-2">@m</div>
+    }
+
+    <div class="mb-3">
+        <a class="btn btn-sm btn-success"
+           asp-controller="CourseLesson"
+           asp-action="Create"
+           asp-route-courseId="@Model.CourseId">
+            + Add Lesson
+        </a>
+
+        <a class="btn btn-sm btn-outline-secondary"
+           asp-controller="CourseLesson"
+           asp-action="Index">
+            ← Back to courses
+        </a>
+    </div>
+
+    <table class="table table-sm align-middle">
+        <thead>
+            <tr>
+                <th style="width:60px">Order</th>
+                <th>Title</th>
+                <th style="width:140px">YouTube Id</th>
+                <th style="width:120px">Published</th>
+                <th style="width:140px" class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var l in Model.Lessons)
+            {
+                <tr>
+                    <td>@l.SortOrder</td>
+                    <td>@l.Title</td>
+                    <td><code>@l.YoutubeId</code></td>
+                    <td>@(l.IsPublished ? "Yes" : "No")</td>
+                    <td class="text-end">
+                        @* edit চাইলে এখানে যোগ করবেন *@
+                        <a class="btn btn-sm btn-outline-danger"
+                           asp-controller="CourseLesson"
+                           asp-action="Delete"
+                           asp-route-courseId="@Model.CourseId"
+                           asp-route-id="@l.Id">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

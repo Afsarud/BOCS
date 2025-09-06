@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Student Page";
+}
+<style>
+    video {
+        -webkit-user-drag: none;
+        pointer-events: auto;
+    }
+</style>
+
+
+<div class="account-container">
+    <div class="account-box">
+        <h2 class="text-center"> Welcome to Student deskboad</h2>
+    </div>
+</div>
+
+
+
+
+<div class="video-secure">
+    <video controls controlsList="nodownload noremoteplayback noplaybackrate"
+           disablePictureInPicture
+           width="600" height="400">
+        <source src="~/videos/lecture1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+</script>
