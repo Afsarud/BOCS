@@ -209,3 +209,20 @@ body {
     -webkit-user-drag: none;
     pointer-events: none;
 }
+
+
+.course-thumb {
+    width: 120px !important;
+    height: 70px !important;
+    object-fit: cover;
+    border-radius: .5rem;
+    border: 1px solid #eee;
+    flex-shrink: 0; /* যাতে ছোট হয়ে না যায় */
+}
+/*.course-thumb {
+    --thumb-w: 120px;
+    --thumb-h: 70px;
+    width: var(--thumb-w);
+    height: var(--thumb-h);
+    object-fit: cover;
+}*/

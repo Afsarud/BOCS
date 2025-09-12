@@ -4433,11 +4433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BOCS\\BOCS\\BOCS.csproj",
+      "projectUniqueName": "E:\\BOCSSoursetree\\BOCS\\BOCS\\BOCS.csproj",
       "projectName": "BOCS",
-      "projectPath": "D:\\BOCS\\BOCS\\BOCS.csproj",
+      "projectPath": "E:\\BOCSSoursetree\\BOCS\\BOCS\\BOCS.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\BOCS\\BOCS\\obj\\",
+      "outputPath": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

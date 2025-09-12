@@ -133,5 +133,41 @@ namespace BOCS.Controllers
             TempData["StatusMessage"] = "🗑️ Lesson deleted.";
             return RedirectToAction(nameof(Manage), new { courseId });
         }
+
+        //drag and drop start
+
+        public class ReorderDto
+        {
+            public List<int> Ids { get; set; } = new();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Reorder(int courseId, [FromBody] ReorderDto dto)
+        {
+            if (dto?.Ids == null || dto.Ids.Count == 0)
+                return BadRequest("No ids");
+
+            // একই কোর্সের lesson-ই শুধু আপডেট করব
+            var lessons = await _db.Lessons
+                .Where(x => x.CourseId == courseId && dto.Ids.Contains(x.Id))
+                .ToListAsync();
+
+            // নিশ্চিত করি তালিকাটি সঠিক/পূর্ণ
+            if (lessons.Count != dto.Ids.Count)
+                return BadRequest("Mismatched ids");
+
+            for (int i = 0; i < dto.Ids.Count; i++)
+            {
+                var id = dto.Ids[i];
+                var l = lessons.First(x => x.Id == id);
+                l.SortOrder = i; // 0-based; চাইলে i+1 দিন
+            }
+
+            await _db.SaveChangesAsync();
+            return Ok(new { updated = lessons.Count });
+        }
+
+        //drag and drop end
     }
 }

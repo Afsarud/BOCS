@@ -2,6 +2,222 @@
 @{
     ViewData["Title"] = "Manage Lessons";
 }
+
+<section class="container py-4">
+    <h4 class="mb-3">@Model.CourseTitle — Lessons</h4>
+
+    @if (TempData["StatusMessage"] is string m)
+    {
+        <div class="alert alert-success py-2">@m</div>
+    }
+
+    <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-sm btn-success"
+           asp-controller="CourseLesson"
+           asp-action="Create"
+           asp-route-courseId="@Model.CourseId">
+            + Add Lesson
+        </a>
+
+        <a class="btn btn-sm btn-outline-secondary"
+           asp-controller="CourseLesson"
+           asp-action="Index">
+            ← Back to courses
+        </a>
+
+        <button id="saveOrderBtn" class="btn btn-sm btn-primary ms-auto d-none">
+            Save order
+        </button>
+    </div>
+
+    <div class="alert alert-info py-2" id="dragHint">
+        Tip: ড্র্যাগ হ্যান্ডেল (≡) ধরে টেনে উপরে/নিচে নিলেই অর্ডার বদলাবে। কাজ শেষে <b>Save order</b> চাপুন।
+    </div>
+
+    <form id="reorderForm">
+        @Html.AntiForgeryToken()
+        <input type="hidden" id="courseId" value="@Model.CourseId" />
+    </form>
+
+    <table class="table table-sm align-middle" id="lessonTable">
+        <thead>
+            <tr>
+                <th style="width:50px">#</th>
+                <th style="width:60px">Order</th>
+                <th>Title</th>
+                <th style="width:180px">YouTube Id</th>
+                <th style="width:120px">Published</th>
+                <th style="width:140px" class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="lessonTbody">
+            @foreach (var l in Model.Lessons.OrderBy(x => x.SortOrder).ThenBy(x => x.Id))
+            {
+                <tr class="dr-row" draggable="true" data-id="@l.Id">
+                    <td class="drag-cell"><span class="drag-handle" title="Drag to reorder">≡</span></td>
+                    <td class="order-cell">@l.SortOrder</td>
+                    <td>@l.Title</td>
+                    <td><code class="text-danger">@l.YoutubeId</code></td>
+                    <td>@(l.IsPublished ? "Yes" : "No")</td>
+                    <td class="text-end">
+                        <a class="btn btn-sm btn-outline-danger"
+                           asp-controller="CourseLesson"
+                           asp-action="Delete"
+                           asp-route-courseId="@Model.CourseId"
+                           asp-route-id="@l.Id">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div id="saveToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3 d-none" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">✅ Order saved.</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="hideToast()"></button>
+        </div>
+    </div>
+</section>
+
+@section Styles {
+    <style>
+        .drag-cell {
+            width: 50px;
+        }
+
+        .drag-handle {
+            cursor: grab;
+            user-select: none;
+            font-size: 20px;
+            line-height: 1;
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: .375rem;
+            border: 1px dashed #cfd3d7;
+        }
+
+        tr.dr-row.dragging {
+            opacity: .6;
+            outline: 2px dashed #0d6efd;
+        }
+
+        tr.dr-row.drop-target {
+            box-shadow: inset 0 2px 0 #0d6efd;
+        }
+
+        #saveOrderBtn.d-none {
+            display: none !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        (function () {
+            const tbody = document.getElementById('lessonTbody');
+            const saveBtn = document.getElementById('saveOrderBtn');
+            let dragEl = null;
+
+            // drag handlers
+            tbody.addEventListener('dragstart', (e) => {
+                const row = e.target.closest('tr.dr-row');
+                if (!row) return;
+                dragEl = row;
+                row.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+            });
+
+            tbody.addEventListener('dragend', (e) => {
+                const row = e.target.closest('tr.dr-row');
+                if (row) row.classList.remove('dragging');
+                [...tbody.querySelectorAll('tr.drop-target')].forEach(r => r.classList.remove('drop-target'));
+                dragEl = null;
+            });
+
+            tbody.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const afterEl = getDragAfterElement(tbody, e.clientY);
+                if (afterEl == null) {
+                    tbody.appendChild(dragEl);
+                } else {
+                    tbody.insertBefore(dragEl, afterEl);
+                }
+                markChanged();
+            });
+
+            function getDragAfterElement(container, y) {
+                const els = [...container.querySelectorAll('tr.dr-row:not(.dragging)')];
+                return els.reduce((closest, child) => {
+                    const box = child.getBoundingClientRect();
+                    const offset = y - box.top - box.height / 2;
+                    if (offset < 0 && offset > closest.offset) {
+                        return { offset: offset, element: child };
+                    } else {
+                        return closest;
+                    }
+                }, { offset: Number.NEGATIVE_INFINITY }).element;
+            }
+
+            function markChanged() {
+                // Reindex visible order numbers
+                [...tbody.querySelectorAll('tr.dr-row')].forEach((tr, i) => {
+                    const cell = tr.querySelector('.order-cell');
+                    if (cell) cell.textContent = i; // 0-based or 1-based: চাইলে i+1
+                });
+                saveBtn.classList.remove('d-none');
+            }
+
+            // Save order
+            saveBtn.addEventListener('click', async function () {
+                const ids = [...tbody.querySelectorAll('tr.dr-row')].map(tr => parseInt(tr.dataset.id));
+                const token = document.querySelector('#reorderForm input[name="__RequestVerificationToken"]').value;
+                const courseId = document.getElementById('courseId').value;
+
+                this.disabled = true;
+                this.textContent = 'Saving...';
+
+                try {
+                    const res = await fetch(`/CourseLesson/Reorder?courseId=${courseId}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': token
+                        },
+                        body: JSON.stringify({ ids })
+                    });
+
+                    if (!res.ok) throw new Error('Failed to save order');
+                    showToast();
+                    this.classList.add('d-none');
+                } catch (err) {
+                    alert('❌ Could not save order. ' + err.message);
+                } finally {
+                    this.disabled = false;
+                    this.textContent = 'Save order';
+                }
+            });
+
+            // toast
+            window.showToast = function () {
+                const t = document.getElementById('saveToast');
+                t.classList.remove('d-none');
+                setTimeout(hideToast, 1800);
+            };
+            window.hideToast = function () {
+                document.getElementById('saveToast').classList.add('d-none');
+            };
+        })();
+    </script>
+}
+
+
+
+@* @model BOCS.ModelsView.LessonManageVM
+@{
+    ViewData["Title"] = "Manage Lessons";
+}
 <section class="container py-4">
     <h4 class="mb-3">@Model.CourseTitle — Lessons</h4>
 
@@ -44,7 +260,7 @@
                     <td><code>@l.YoutubeId</code></td>
                     <td>@(l.IsPublished ? "Yes" : "No")</td>
                     <td class="text-end">
-                        @* edit চাইলে এখানে যোগ করবেন *@
+                       
                         <a class="btn btn-sm btn-outline-danger"
                            asp-controller="CourseLesson"
                            asp-action="Delete"
@@ -57,4 +273,4 @@
             }
         </tbody>
     </table>
-</section>
+</section> *@

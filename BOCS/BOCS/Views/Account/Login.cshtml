@@ -9,7 +9,7 @@
 <div class="account-container">
     <div class="account-box">
         <div class="text-center">
-            <img src="~/images/logo.png" alt="BOCS Logo" style="height:50px; margin-bottom:10px;" />
+            <img src="~/images/logo.png" alt="BOCS Logo" style="height:100px;margin-bottom:10px;border-radius: 50% !important;" />
         </div>
         <form asp-action="Login" method="post" class="p-4 shadow rounded bg-white">
             @Html.AntiForgeryToken()
@@ -41,14 +41,14 @@
 
             <input type="submit" value="Login" class="btn btn-success w-100 p-2" />
 
-            <p class="text-center mt-2">
+            @* <p class="text-center mt-2">
                 Don't have an account?
                 <a asp-controller="Account" asp-action="Register" class="text-decoration-none">Register</a>
             </p>
 
             <div class="text-center">
                 <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3">Back</a>
-            </div>
+            </div> *@
         </form>
     </div>
 </div>

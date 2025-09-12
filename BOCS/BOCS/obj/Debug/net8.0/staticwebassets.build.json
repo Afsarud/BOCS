@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GPfelnnzGjWf6unUr7gJMSSAb9c22/zGcjFBYjCUyng=",
+  "Hash": "WEIhrPMVI+B+SvG6LTb0mb7C37CQa/wF92MTtM44fIg=",
   "Source": "BOCS",
   "BasePath": "_content/BOCS",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BOCS\\wwwroot",
       "Source": "BOCS",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BOCS.styles.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BOCS.styles.css",
       "SourceId": "BOCS",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "BOCS.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BOCS.styles.css"
+      "OriginalItemSpec": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BOCS.styles.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BOCS.bundle.scp.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BOCS.bundle.scp.css",
       "SourceId": "BOCS",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "BOCS.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BOCS.bundle.scp.css"
+      "OriginalItemSpec": "E:\\BOCSSoursetree\\BOCS\\BOCS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BOCS.bundle.scp.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\css\\Account.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\Account.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "css/Account.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Account.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\css\\site.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\site.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\favicon.ico",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\favicon.ico",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\banner.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\banner.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/banner.jpg",
       "AssetKind": "All",
@@ -131,10 +131,29 @@
       "OriginalItemSpec": "wwwroot\\images\\banner.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\BOCS Logo.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\banner1.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "images/banner1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\banner1.jpg"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\BOCS Logo.jpg",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/BOCS Logo.jpg",
       "AssetKind": "All",
@@ -150,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\BOCS Logo.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc1.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc1.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc1.jpg",
       "AssetKind": "All",
@@ -169,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc1.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc2.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc2.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc2.jpg",
       "AssetKind": "All",
@@ -188,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc2.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc3.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc3.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc3.jpg",
       "AssetKind": "All",
@@ -207,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc3.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc3.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc3.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc3.png",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc3.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc4.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc4.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc4.jpg",
       "AssetKind": "All",
@@ -245,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc4.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc4.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc4.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc4.png",
       "AssetKind": "All",
@@ -264,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc4.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc5.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc5.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc5.jpg",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc5.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc5.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc5.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc5.png",
       "AssetKind": "All",
@@ -302,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc5.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc6.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc6.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc6.jpg",
       "AssetKind": "All",
@@ -321,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc6.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc6.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc6.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc6.png",
       "AssetKind": "All",
@@ -340,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc6.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc7.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc7.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc7.jpg",
       "AssetKind": "All",
@@ -359,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc7.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc8.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc8.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc8.jpg",
       "AssetKind": "All",
@@ -378,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc8.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\doc8.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\doc8.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/doc8.png",
       "AssetKind": "All",
@@ -397,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doc8.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\logo.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\logo.png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -416,10 +435,29 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\images\\logo1.png",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\logo1 (2).png",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "images/logo1 (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo1 (2).png"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\images\\logo1.png",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "images/logo1.png",
       "AssetKind": "All",
@@ -435,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo1.png"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\course-info.bootstrap.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-info.bootstrap.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/course-info.bootstrap.js",
       "AssetKind": "All",
@@ -454,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\js\\course-info.bootstrap.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\course-info.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-info.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/course-info.js",
       "AssetKind": "All",
@@ -473,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\js\\course-info.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/protect-course-info.js",
       "AssetKind": "All",
@@ -492,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\js\\protect-course-info.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\protect-courses-index.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-courses-index.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/protect-courses-index.js",
       "AssetKind": "All",
@@ -511,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\js\\protect-courses-index.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\single-tab-guard.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\single-tab-guard.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/single-tab-guard.js",
       "AssetKind": "All",
@@ -530,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\js\\single-tab-guard.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\js\\site.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\site.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -549,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -568,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -587,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -606,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -625,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -644,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -663,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -682,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -701,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -720,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -739,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -758,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -777,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -796,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -815,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -834,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -853,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -872,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -891,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -910,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -929,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -948,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -967,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -986,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1005,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1024,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1043,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1062,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1081,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1100,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1119,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1138,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1157,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1176,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1195,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1214,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1233,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1252,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1271,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1290,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1309,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1328,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1347,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1366,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1385,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1404,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1423,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1442,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1461,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1480,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1499,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1518,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1537,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1556,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1575,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1594,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1613,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1632,29 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\3ea11052493f4c969af9fd04359bed0e.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
-      "BasePath": "_content/BOCS",
-      "RelativePath": "uploads/courses/3ea11052493f4c969af9fd04359bed0e.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\courses\\3ea11052493f4c969af9fd04359bed0e.jpg"
-    },
-    {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg",
-      "SourceId": "BOCS",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "uploads/courses/429be762e39848bcbab7520cbdd651a4.jpg",
       "AssetKind": "All",
@@ -1670,10 +1689,48 @@
       "OriginalItemSpec": "wwwroot\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg"
     },
     {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a4eac76386c84d3997001f183a2ee27e.jpg",
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\782d2795fed345de818729153ce6550c.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "uploads/courses/782d2795fed345de818729153ce6550c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\courses\\782d2795fed345de818729153ce6550c.jpg"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\889b0e8e8f5144a3bdbdbabc1c22eeb3.jpg",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "uploads/courses/889b0e8e8f5144a3bdbdbabc1c22eeb3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\courses\\889b0e8e8f5144a3bdbdbabc1c22eeb3.jpg"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a4eac76386c84d3997001f183a2ee27e.jpg",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
       "BasePath": "_content/BOCS",
       "RelativePath": "uploads/courses/a4eac76386c84d3997001f183a2ee27e.jpg",
       "AssetKind": "All",
@@ -1687,25 +1744,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\courses\\a4eac76386c84d3997001f183a2ee27e.jpg"
-    },
-    {
-      "Identity": "D:\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\af23ca8bd6144581b76e2b622d925c1a.jpg",
-      "SourceId": "BOCS",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BOCS\\BOCS\\wwwroot\\",
-      "BasePath": "_content/BOCS",
-      "RelativePath": "uploads/courses/af23ca8bd6144581b76e2b622d925c1a.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\courses\\af23ca8bd6144581b76e2b622d925c1a.jpg"
     }
   ]
 }
