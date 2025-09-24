@@ -32,6 +32,7 @@
                         <th>Course Title</th>
                         <th>Course Image</th>
                         <th>Course Duration</th>
+                        <th>Course Type</th>
                         <th>Course Price</th>
                         <th style="width:120px;">Active</th>
                         <th style="width:220px;">Buttons</th>
@@ -59,6 +60,7 @@
                             </td> *@
                             <td>@fileName</td>
                             <td class="fw-semibold">@c.DurationDays</td>
+                            <td class="fw-semibold">@c.CourseType.ToString()</td>
                             <td class="fw-semibold">@c.PriceBdt</td>
                             <td>
                                 @if (c.IsActive)

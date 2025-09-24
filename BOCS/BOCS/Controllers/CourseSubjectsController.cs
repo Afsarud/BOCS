@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-[Authorize(Roles = "Admin")]
-[Route("admin/course-subjects")]
+[Authorize(Roles = "Admin,Teacher")]
+[Route("[controller]")]
 public class CourseSubjectsController : Controller
 {
     private readonly AppDbContext _db;
@@ -22,6 +22,7 @@ public class CourseSubjectsController : Controller
             {
                 Id = c.Id,
                 Title = c.Title,
+                CourseType= c.CourseType,
                 SubjectCount = _db.Subjects.Count(s => s.CourseId == c.Id)
             }).ToListAsync();
 
@@ -92,6 +93,45 @@ public class CourseSubjectsController : Controller
             Id = id,
             Title = s.Title
         });
+    }
+
+    // GET /admin/course-subjects/{courseId}/edit/{id}
+    [HttpGet("{courseId:int}/edit/{id:int}")]
+    public async Task<IActionResult> Edit(int courseId, int id)
+    {
+        var s = await _db.Subjects
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == id && x.CourseId == courseId);
+        if (s == null) return NotFound();
+
+        var vm = new SubjectEditVM
+        {
+            CourseId = s.CourseId,
+            Id = s.Id,
+            Title = s.Title,
+            SortOrder = s.SortOrder,
+            IsPublished = s.IsPublished
+        };
+        return View(vm); // Views/CourseSubjects/Edit.cshtml
+    }
+
+    // POST /admin/course-subjects/{courseId}/edit/{id}
+    [HttpPost("{courseId:int}/edit/{id:int}"), ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int courseId, int id, SubjectEditVM vm)
+    {
+        if (courseId != vm.CourseId || id != vm.Id) return BadRequest();
+        if (!ModelState.IsValid) return View(vm);
+
+        var s = await _db.Subjects.FirstOrDefaultAsync(x => x.Id == id && x.CourseId == courseId);
+        if (s == null) return NotFound();
+
+        s.Title = vm.Title;
+        s.SortOrder = vm.SortOrder;
+        s.IsPublished = vm.IsPublished;
+
+        await _db.SaveChangesAsync();
+        TempData["StatusMessage"] = "✏️ Subject updated.";
+        return RedirectToAction(nameof(Index), new { courseId });
     }
 
     // POST /admin/course-subjects/{courseId}/delete/{id}

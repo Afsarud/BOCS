@@ -12,6 +12,7 @@ namespace BOCS.Models
         public string? ThumbnailUrl { get; set; }
         public string? ThumbnailOriginalName { get; set; }
         public int DurationDays { get; set; }
+       
         public int PriceBdt { get; set; }
         [StringLength(20)]
         public string? LatestYoutubeId { get; set; }
@@ -19,5 +20,14 @@ namespace BOCS.Models
         public ICollection<CourseLesson> Lessons { get; set; } = new List<CourseLesson>();
         // ✅ নতুন
         public ICollection<CourseSubject> Subjects { get; set; } = new List<CourseSubject>();
+        // ✅ নতুন: enum হিসেবে CourseType, DB-তে int (1=Full, 2=Half)
+        [Required]
+        [Display(Name = "Course Type")]
+        public CourseType CourseType { get; set; } = CourseType.Full;
+    }
+    public enum CourseType
+    {
+        Full = 1,
+        Half = 2
     }
 }

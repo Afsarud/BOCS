@@ -2,7 +2,7 @@
 @model BOCS.ModelsView.EnrollmentCreateVM
 @{
     ViewData["Title"] = "Enroll";
-    var payTo = "01308599956"; // আমাদের bKash নম্বর
+    var payTo = "01308599956";
 }
 
 <section class="container py-4">
@@ -16,8 +16,16 @@
                 <input type="hidden" asp-for="CourseId" />
                 <input type="hidden" asp-for="CourseTitle" />
                 <input type="hidden" asp-for="CoursePriceBdt" />
-
+                <input type="hidden" asp-for="CourseDurationDays" />
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Duration</label>
+                        <input class="form-control" value="@Model.CourseDurationDays days" readonly />
+                    </div>
+                </div>
                 <div class="row g-3">
+                    
+
                     <div class="col-md-6">
                         <label asp-for="Access" class="form-label"></label>
                         <select asp-for="Access" class="form-select"
@@ -50,6 +58,29 @@
                         <input asp-for="MobileNumber" class="form-control" placeholder="Your mobile number" />
                         <span asp-validation-for="MobileNumber" class="text-danger"></span>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="StartDate" class="form-label"></label>
+                            <input asp-for="StartDate"
+                                   type="date"
+                                   asp-format="{0:yyyy-MM-dd}"
+                                   class="form-control"
+                                   id="StartDate" />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <!-- End date: auto-computed, read-only -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="EndDate" class="form-label"></label>
+                            <input asp-for="EndDate"
+                                   type="date"
+                                   asp-format="{0:yyyy-MM-dd}"
+                                   class="form-control"
+                                   id="EndDate"
+                                   readonly />
+                        </div>
+                    </div>
+                   
                 </div>
 
                 <div class="mt-4 p-3 border rounded bg-light d-flex justify-content-between align-items-center">
@@ -92,5 +123,31 @@
                 setTimeout(() => this.innerText = 'Copy', 1500);
             });
         });
+    </script>
+    <script>
+        (function () {
+            const dur = parseInt(document.querySelector('[name="CourseDurationDays"]').value || "0", 10);
+            const startEl = document.getElementById('StartDate');
+            const endEl = document.getElementById('EndDate');
+
+            function toYmd(d) {
+                const pad = n => String(n).padStart(2, '0');
+                return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+            }
+
+            function recompute() {
+                if (!startEl.value) return;
+                const s = new Date(startEl.value + 'T00:00:00');
+                const e = new Date(s);
+                const days = Math.max(dur, 1) - 1;   // inclusive
+                e.setDate(e.getDate() + days);
+                endEl.value = toYmd(e);
+            }
+
+            // first paint
+            recompute();
+            // when user picks a different start date
+            startEl.addEventListener('change', recompute);
+        })();
     </script>
 }

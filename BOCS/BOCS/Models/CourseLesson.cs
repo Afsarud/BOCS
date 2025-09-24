@@ -21,12 +21,14 @@ namespace BOCS.Models
         public string? YoutubeUrlRaw { get; set; } 
 
         public int SortOrder { get; set; } = 0;
+        
         public bool IsPublished { get; set; } = true;
 
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
 
         // ✅ নতুন
         public int? SubjectId { get; set; }
+        public bool IsPlay { get; set; } = false;
         public CourseSubject? Subject { get; set; }
     }
 }

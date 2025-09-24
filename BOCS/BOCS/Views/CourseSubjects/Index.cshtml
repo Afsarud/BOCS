@@ -19,7 +19,7 @@
             <th>Title</th>
             <th style="width:120px;" class="text-center">Lessons</th>
             <th style="width:110px;" class="text-center">Published</th>
-            <th style="width:120px;" class="text-end">Actions</th>
+            <th style="width:180px;" class="text-end">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -31,7 +31,11 @@
                 <td class="text-center">@s.LessonCount</td>
                 <td class="text-center">@((s.IsPublished) ? "Yes" : "No")</td>
                 <td class="text-end">
-                    <a class="btn btn-outline-danger btn-sm"
+                        <a class="btn btn-sm btn-outline-primary"
+                           asp-action="Edit"
+                           asp-route-courseId="@Model.CourseId"
+                           asp-route-id="@s.Id">Edit</a>
+                        <a class="btn btn-sm btn-outline-danger"
                        asp-action="Delete" asp-route-courseId="@Model.CourseId" asp-route-id="@s.Id">Delete</a>
                 </td>
             </tr>

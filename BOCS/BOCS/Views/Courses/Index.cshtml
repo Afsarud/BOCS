@@ -35,7 +35,13 @@
                     <div class="card-body d-flex flex-column">
                         <h6 class="mb-1 text-truncate" title="@c.Title">@c.Title</h6>
                         <div class="d-flex justify-content-between text-muted small mb-3">
-                            <span>Duration: @c.DurationDays days</span>
+                            <span>
+                                Duration: @c.DurationDays days
+                                @if (c.CourseType == CourseType.Half)
+                                {
+                                    <text> (Half)</text>   <!-- ✅ শুধুমাত্র Half হলে দেখাবে -->
+                                }
+                            </span>
                             <span>@c.PriceBdt BDT</span>
                         </div>
                         <div class="mt-auto d-flex gap-2">

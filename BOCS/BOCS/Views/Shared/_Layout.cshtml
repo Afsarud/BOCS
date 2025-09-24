@@ -1,6 +1,5 @@
 ﻿@using BOCS.Services
 @inject IEnrollmentService EnrollmentSvc
-@* @inject BOCS.Services.IEnrollmentService EnrollmentSvc *@
 @{
     var controller = (ViewContext.RouteData.Values["controller"]?.ToString() ?? "").ToLower();
     var action = (ViewContext.RouteData.Values["action"]?.ToString() ?? "").ToLower();
@@ -26,7 +25,6 @@
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logo.png" alt="BOCS Logo" class="logo-40" />
-                    @* <img src="~/images/logo.png" alt="BOCS Logo" style="height:40px;" /> *@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +33,6 @@
 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-
                         @* ===== Student-only menu ===== *@
                         @if (User.IsInRole("Student"))
                         {
@@ -43,11 +40,10 @@
                                 <a class="nav-link" asp-controller="AboutUs" asp-action="Index">About Us</a>
                             </li>
                             <li class="nav-item">
-                                @* <a class="nav-link" asp-controller="Courses" asp-action="CourseIndex">Course Details</a> *@
                                 <a class="nav-link" asp-controller="Courses" asp-action="Index">All Course</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Students" asp-action="Index">Enrolled Courses</a>
+                                <a class="nav-link" asp-controller="Students" asp-action="Index">My Course</a>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -58,14 +54,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="myCourseDropdown">
-                                    <li>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center"
-                                           asp-controller="MyCourses" asp-action="InProgressIndex">
-                                            In Progress
-                                            @* চাইলে কাউন্ট দেখাতে পারেন: *@
-                                        <span class="badge rounded-pill bg-secondary">@ViewBag.InProgressCount</span>
-                                        </a>
-                                    </li>
+                                    @await Component.InvokeAsync("StudentInProgressMenu")
                                     <li>
                                         <a class="dropdown-item d-flex justify-content-between align-items-center"
                                            asp-controller="MyCourses" asp-action="CompletedIndex">
@@ -75,37 +64,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-
-                            @* Admin permission / enrollment থাকলেই My Course দেখাবে *@
-                            @if (EnrollmentSvc?.HasAnyCourses(User) ?? false)
-                            {
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex align-items-center"
-                                       href="#" id="myCourseDropdown"
-                                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        My Course
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="myCourseDropdown">
-                                        <li>
-                                            <a class="dropdown-item d-flex justify-content-between align-items-center"
-                                               asp-controller="MyCourses" asp-action="InProgress">
-                                                In Progress
-                                                @* চাইলে কাউন্ট দেখাতে পারেন:*@
-                                        <span class="badge rounded-pill bg-secondary">@ViewBag.InProgressCount</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item d-flex justify-content-between align-items-center"
-                                               asp-controller="MyCourses" asp-action="Completed">
-                                                Completed
-                                                @* <span class="badge rounded-pill bg-secondary">@ViewBag.CompletedCount</span> *@
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            }
                         }
                         else
                         {
@@ -135,7 +93,6 @@
                                             </a>
                                         </li>
                                         <li>
-                                            @* <a class="dropdown-item" asp-controller="CourseSubjects" asp-action="Courses">Subjects</a> *@
                                             <a class="dropdown-item d-flex justify-content-between align-items-center"
                                                asp-controller="CourseSubjects" asp-action="Courses">
                                                 Subjects
@@ -154,6 +111,12 @@
                                                 Course Enrollment
                                             </a>
                                         </li>
+                                        <li>
+                                            <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                               asp-controller="admin" asp-action="enrollments">
+                                                Course Approve
+                                            </a>
+                                        </li>
 
                                         <li>
                                             <a class="dropdown-item d-flex justify-content-between align-items-center"
@@ -166,8 +129,32 @@
                             }
                             @if (User.IsInRole("Teacher"))
                             {
+                                
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Home" asp-action="Teacher">Teachers</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center"
+                                       href="#" id="allSettingsDropdown"
+                                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Settings
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="allSettingsDropdown">
+                                        <li>
+                                            <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                               asp-controller="CourseSubjects" asp-action="Courses">
+                                                Subjects
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                               asp-controller="CourseLesson" asp-action="Index">
+                                                Lessons
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
                                 </li>
                             }
                         }

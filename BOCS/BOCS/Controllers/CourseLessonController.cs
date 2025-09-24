@@ -9,9 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BOCS.Controllers
 {
-    /// Admin only: manage lessons under a course
-    [Authorize(Roles = "Admin")]
+   // Admin only: manage lessons under a course
+    [Authorize(Roles = "Admin,Teacher")]
     [Route("admin/course-lessons")]
+    [AutoValidateAntiforgeryToken] // POST এ টোকেন চাই
     public class CourseLessonController : Controller
     {
         private readonly AppDbContext _db;
@@ -26,6 +27,7 @@ namespace BOCS.Controllers
                 {
                     Id = c.Id,
                     Title = c.Title,
+                    CourseType = c.CourseType,
                     LessonCount = _db.Lessons.Count(l => l.CourseId == c.Id)
                 })
                 .ToListAsync();
@@ -33,7 +35,8 @@ namespace BOCS.Controllers
             return View("Index", courses); 
         }
 
-        [HttpGet("{courseId:int}")]
+     
+        [HttpGet("{courseId:int}", Name = "CourseLessons_Manage")]
         public async Task<IActionResult> Manage(int courseId)
         {
             var course = await _db.Courses.AsNoTracking()
@@ -54,7 +57,8 @@ namespace BOCS.Controllers
                         YoutubeId = l.YoutubeId,
                         SortOrder = l.SortOrder,
                         IsPublished = l.IsPublished,
-                        CreatedAtUtc = l.CreatedAtUtc
+                        CreatedAtUtc = l.CreatedAtUtc,
+                        IsPlay = l.IsPlay
                     })
                     .ToListAsync()
             };
@@ -62,32 +66,77 @@ namespace BOCS.Controllers
             return View("Manage", vm);
         }
 
-        //[HttpGet("{courseId:int}/create")]
-        //public IActionResult Create(int courseId) =>
-        //    View("Create", new LessonCreateVM { CourseId = courseId });
+        [HttpPost("tick")]   // POST /admin/course-lessons/tick?courseId=20
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Tick(int courseId, [FromBody] TickDto dto)
+        {
+            if (dto?.Ids == null || dto.Ids.Count == 0) return BadRequest("No ids");
+
+            var lessons = await _db.Lessons
+                .Where(x => x.CourseId == courseId && dto.Ids.Contains(x.Id))
+                .ToListAsync();
+
+            if (lessons.Count == 0) return NotFound();
+
+            foreach (var l in lessons)
+                l.IsPlay = dto.Value;
+
+            await _db.SaveChangesAsync();
+            return Ok(new { updated = lessons.Count, value = dto.Value ? 1 : 0 });
+        }
 
         [HttpGet("{courseId:int}/create")]
         public async Task<IActionResult> Create(int courseId)
         {
+            var course = await _db.Courses.AsNoTracking().FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null) return NotFound();
+
+            // next sort = max + 1 (খালি হলে 0)
+            var max = await _db.Lessons
+                .Where(l => l.CourseId == courseId)
+                .Select(l => (int?)l.SortOrder)
+                .MaxAsync() ?? -1;
+            var next = max + 1;
+
             ViewBag.Subjects = await _db.Subjects
                 .Where(s => s.CourseId == courseId && s.IsPublished)
                 .OrderBy(s => s.SortOrder)
                 .Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Title })
                 .ToListAsync();
+            var vm = new LessonCreateVM
+            {
+                CourseId = courseId,
+                SortOrder = next,
+                IsPublished = true
+            };
 
-            return View(new LessonCreateVM { CourseId = courseId });
+            return View(vm);
         }
 
         [HttpPost("{courseId:int}/create"), ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(int courseId, LessonCreateVM vm)
         {
             if (courseId != vm.CourseId) return BadRequest();
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Subjects = await _db.Subjects.AsNoTracking()
+                    .Where(s => s.CourseId == courseId && s.IsPublished)
+                    .OrderBy(s => s.SortOrder)
+                    .Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Title })
+                    .ToListAsync();
+                return View(vm);
+            }
+            var max = await _db.Lessons
+                       .Where(l => l.CourseId == courseId)
+                       .Select(l => (int?)l.SortOrder)
+                       .MaxAsync() ?? -1;
+            var next = max + 1;
 
             var ytId = YoutubeHelper.ExtractId(vm.YoutubeUrlOrId);
             if (ytId == null)
                 ModelState.AddModelError(nameof(vm.YoutubeUrlOrId), "Invalid YouTube URL or ID.");
 
-            if (!ModelState.IsValid) return View("Create", vm);
+            //if (!ModelState.IsValid) return View("Create", vm);
 
             _db.Lessons.Add(new CourseLesson
             {
@@ -95,13 +144,79 @@ namespace BOCS.Controllers
                 Title = vm.Title,
                 YoutubeId = ytId,
                 YoutubeUrlRaw = vm.YoutubeUrlOrId,
-                SortOrder = vm.SortOrder,
                 IsPublished = vm.IsPublished,
-                SubjectId = vm.SubjectId  //new added subject
+                SubjectId = vm.SubjectId,  //new added subject
+                SortOrder = next,
+                CreatedAtUtc = DateTime.UtcNow
             });
 
             await _db.SaveChangesAsync();
             TempData["StatusMessage"] = "✅ Lesson created.";
+            return RedirectToAction(nameof(Manage), new { courseId });
+        }
+
+        [HttpGet("{courseId:int}/edit/{id:int}")]
+        public async Task<IActionResult> Edit(int courseId, int id)
+        {
+            var lesson = await _db.Lessons
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id && x.CourseId == courseId);
+            if (lesson == null) return NotFound();
+
+            // subject dropdown
+            ViewBag.Subjects = await _db.Subjects
+                .Where(s => s.CourseId == courseId && s.IsPublished)
+                .OrderBy(s => s.SortOrder)
+                .Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Title })
+                .ToListAsync();
+
+            var vm = new LessonEditVM
+            {
+                CourseId = courseId,
+                Id = lesson.Id,
+                Title = lesson.Title,
+                YoutubeUrlOrId = string.IsNullOrWhiteSpace(lesson.YoutubeUrlRaw) ? lesson.YoutubeId : lesson.YoutubeUrlRaw,
+                SortOrder = lesson.SortOrder,
+                IsPublished = lesson.IsPublished,
+                SubjectId = lesson.SubjectId
+            };
+
+            return View("Edit", vm);
+        }
+
+        [HttpPost("{courseId:int}/edit/{id:int}"), ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int courseId, int id, LessonEditVM vm)
+        {
+            if (courseId != vm.CourseId || id != vm.Id) return BadRequest();
+
+            var ytId = YoutubeHelper.ExtractId(vm.YoutubeUrlOrId);
+            if (ytId == null)
+                ModelState.AddModelError(nameof(vm.YoutubeUrlOrId), "Invalid YouTube URL or ID.");
+
+            if (!ModelState.IsValid)
+            {
+                // repopulate dropdown
+                ViewBag.Subjects = await _db.Subjects
+                    .Where(s => s.CourseId == courseId && s.IsPublished)
+                    .OrderBy(s => s.SortOrder)
+                    .Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Title })
+                    .ToListAsync();
+
+                return View("Edit", vm);
+            }
+
+            var lesson = await _db.Lessons.FirstOrDefaultAsync(x => x.Id == id && x.CourseId == courseId);
+            if (lesson == null) return NotFound();
+
+            lesson.Title = vm.Title;
+            lesson.YoutubeId = ytId;
+            lesson.YoutubeUrlRaw = vm.YoutubeUrlOrId;
+            lesson.SortOrder = vm.SortOrder;
+            lesson.IsPublished = vm.IsPublished;
+            lesson.SubjectId = vm.SubjectId;
+
+            await _db.SaveChangesAsync();
+            TempData["StatusMessage"] = "✏️ Lesson updated.";
             return RedirectToAction(nameof(Manage), new { courseId });
         }
 
@@ -141,33 +256,26 @@ namespace BOCS.Controllers
             public List<int> Ids { get; set; } = new();
         }
 
-        [HttpPost]
+        [HttpPost("reorder")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Reorder(int courseId, [FromBody] ReorderDto dto)
         {
             if (dto?.Ids == null || dto.Ids.Count == 0)
                 return BadRequest("No ids");
 
-            // একই কোর্সের lesson-ই শুধু আপডেট করব
             var lessons = await _db.Lessons
                 .Where(x => x.CourseId == courseId && dto.Ids.Contains(x.Id))
                 .ToListAsync();
 
-            // নিশ্চিত করি তালিকাটি সঠিক/পূর্ণ
             if (lessons.Count != dto.Ids.Count)
                 return BadRequest("Mismatched ids");
 
             for (int i = 0; i < dto.Ids.Count; i++)
-            {
-                var id = dto.Ids[i];
-                var l = lessons.First(x => x.Id == id);
-                l.SortOrder = i; // 0-based; চাইলে i+1 দিন
-            }
+                lessons.First(x => x.Id == dto.Ids[i]).SortOrder = i; // অথবা i+1
 
             await _db.SaveChangesAsync();
             return Ok(new { updated = lessons.Count });
         }
 
-        //drag and drop end
     }
 }

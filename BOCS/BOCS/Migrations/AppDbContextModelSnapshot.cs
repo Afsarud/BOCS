@@ -30,6 +30,9 @@ namespace BOCS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CourseType")
+                        .HasColumnType("int");
+
                     b.Property<int>("DurationDays")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -85,6 +88,9 @@ namespace BOCS.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("date");
+
                     b.Property<bool>("IsApproved")
                         .HasColumnType("bit");
 
@@ -107,10 +113,16 @@ namespace BOCS.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("date");
+
                     b.Property<string>("StudentId")
                         .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("Tic")
+                        .HasColumnType("bit");
 
                     b.Property<string>("TransactionId")
                         .HasMaxLength(64)
@@ -140,6 +152,9 @@ namespace BOCS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<bool>("IsPlay")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsPublished")
                         .ValueGeneratedOnAdd()

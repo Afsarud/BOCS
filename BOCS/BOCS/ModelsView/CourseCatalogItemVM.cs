@@ -1,4 +1,6 @@
-﻿namespace BOCS.ModelsView
+﻿using BOCS.Models;
+
+namespace BOCS.ModelsView
 {
     public class CourseCatalogItemVM
     {
@@ -8,5 +10,6 @@
         public int DurationDays { get; set; }
         public int PriceBdt { get; set; }
         public int NotificationCount { get; set; } = 0; // চাইলে দেখাবে
+        public CourseType CourseType { get; set; }
     }
 }

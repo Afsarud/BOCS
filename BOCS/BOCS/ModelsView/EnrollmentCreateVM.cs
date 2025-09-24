@@ -1,10 +1,12 @@
 ﻿using BOCS.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BOCS.ModelsView
 {
     public class EnrollmentCreateVM
-    {// readonly info
+    {
         public int CourseId { get; set; }
         public string CourseTitle { get; set; } = "";
         public int CoursePriceBdt { get; set; }
@@ -28,5 +30,16 @@ namespace BOCS.ModelsView
         [Display(Name = "Your mobile number")]
         [Required, StringLength(20)]
         public string MobileNumber { get; set; } = "";
+        public int CourseDurationDays { get; set; }
+
+        [Column(TypeName = "date")] 
+        [DataType(DataType.Date)]
+        [Display(Name = "Start date")]
+        public DateTime StartDate { get; set; }
+
+        [Column(TypeName = "date")] 
+        [DataType(DataType.Date)]
+        [Display(Name = "End date")]
+        public DateTime EndDate { get; set; }
     }
 }

@@ -14,7 +14,8 @@ namespace BOCS.ModelsView
         public string YoutubeUrlOrId { get; set; } = "";
 
         [Display(Name = "Sort order")]
-        public int SortOrder { get; set; } = 0;
+        //public int SortOrder { get; set; } = 0;
+        public int SortOrder { get; set; }
 
         [Display(Name = "Published")]
         public bool IsPublished { get; set; } = true;

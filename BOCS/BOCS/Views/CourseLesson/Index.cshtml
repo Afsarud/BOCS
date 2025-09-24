@@ -9,8 +9,9 @@
         <thead>
             <tr>
                 <th>Title</th>
+                <th class="text-center">Course Type</th>
                 <th class="text-end">Lessons</th>
-                <th class="text-end"></th>
+                <th class="text-end">Lessons Manage</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
             {
                 <tr>
                     <td>@c.Title</td>
+                    <td class="text-center">@c.CourseType</td>
                     <td class="text-end"><span class="badge bg-secondary">@c.LessonCount</span></td>
                     <td class="text-end">
                         <a class="btn btn-sm btn-primary"

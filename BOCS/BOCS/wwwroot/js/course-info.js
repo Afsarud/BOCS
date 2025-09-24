@@ -1,7 +1,25 @@
-﻿// YouTube প্লেয়ার বদলানো + indexing + delegation
-(function () {
+﻿(function () {
     const container = document.getElementById('videoTop');
-    const LESSON_IDS = Array.isArray(window.__LESSON_IDS__) ? window.__LESSON_IDS__ : [];
+
+    function readJsonFromScript(id, fallback) {
+        const el = document.getElementById(id);
+        if (!el) return fallback;
+        try { return JSON.parse(el.textContent || ''); }
+        catch { return fallback; }
+    }
+
+    // Razor থেকে আসা ডেটা
+    const initialId = readJsonFromScript('INITIAL_ID', '');
+    const listFromScript = readJsonFromScript('LESSON_IDS_DATA', []);
+
+    // ফ্যালব্যাক: DOM থেকে লিস্ট বানাও
+    const LESSON_IDS = (Array.isArray(listFromScript) && listFromScript.length)
+        ? listFromScript
+        : Array.from(document.querySelectorAll('.lesson-item'))
+            .map(li => li.getAttribute('data-yt') || '');
+
+    // admin flag (ভিউতে hidden input আছে)
+    const isAdmin = (document.getElementById('IS_ADMIN_FLAG')?.value === 'true');
 
     function toYtId(input) {
         if (!input) return "";
@@ -19,35 +37,6 @@
         return LESSON_IDS[i] || "";
     }
 
-//    function renderPlayer(id) {
-//        const yt = toYtId(id);
-//        if (!yt || !container) return;
-
-//        const bust = Date.now();
-//        //const params = new URLSearchParams({
-//        //    rel: '0',
-//        //    controls: '0',        // ⬅️ gear/YouTube/Share bar লুকবে
-//        //    modestbranding: '1',
-//        //    fs: '0',              // fullscreen বাটন hide
-//        //    disablekb: '1',       // কিবোর্ড শর্টকাট অফ
-//        //    iv_load_policy: '3',  // annotations off
-//        //    cc_load_policy: '0',  // captions default off
-//        //    playsinline: '1',
-//        //    autoplay: '1',
-//        //    origin: location.origin,
-//        //    enablejsapi: '1'
-//        //});
-
-//        container.innerHTML = `
-//<iframe id="ytPlayer"
-//  src="https://www.youtube-nocookie.com/embed/${yt}?${params.toString()}&_=${bust}"
-//  title="Class player" frameborder="0"
-//  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//  allowfullscreen></iframe>`;
-//        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-//    }
-
-
     function renderPlayer(id) {
         const yt = toYtId(id);
         if (!yt || !container) return;
@@ -55,22 +44,31 @@
         const params = new URLSearchParams({
             rel: '0', controls: '1', modestbranding: '1',
             fs: '0', disablekb: '0', iv_load_policy: '3', cc_load_policy: '0',
-            playsinline: '1', autoplay: '1', mute: '1', origin: location.origin, enablejsapi: '1'
+            playsinline: '1', autoplay: '1', mute: '1',
+            origin: location.origin, enablejsapi: '1'
         });
 
-        container.innerHTML = `
-  <iframe id="ytPlayer"
-    src="https://www.youtube-nocookie.com/embed/${yt}?${params.toString()}&_=${Date.now()}"
-    title="Class player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    sandbox="allow-scripts allow-same-origin allow-presentation"
-    allowfullscreen></iframe>`;
+        container.innerHTML =
+            `<iframe id="ytPlayer"
+        src="https://www.youtube-nocookie.com/embed/${yt}?${params.toString()}&_=${Date.now()}"
+        title="Class player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        sandbox="allow-scripts allow-same-origin allow-presentation"
+        allowfullscreen></iframe>`;
     }
 
-    // ক্লিক: পুরো পেজে delegation (accordion-এর ভিতরেও কাজ করবে)
+    // --- Click delegation (accordion-এর ভেতরেও কাজ করবে) ---
     document.addEventListener('click', function (e) {
         const li = e.target.closest('.lesson-item');
         if (!li) return;
+
+        // IsPlay চেক — admin হলে bypass
+        const allowed = (li.dataset.canplay === 'true') || isAdmin;
+        if (!allowed) {
+            // guard.js না থাকলেও এখানে ব্লক থাকবে
+            alert('Class not permitted.');
+            return;
+        }
 
         const direct = li.getAttribute('data-yt');
         const byIdx = idByIndex(li.getAttribute('data-idx'));
@@ -83,7 +81,7 @@
         renderPlayer(id);
     });
 
-    // Keyboard support
+    // কিবোর্ড সাপোর্ট
     document.addEventListener('keydown', function (e) {
         if ((e.key === 'Enter' || e.key === ' ') && document.activeElement?.classList.contains('lesson-item')) {
             e.preventDefault();
@@ -91,13 +89,17 @@
         }
     });
 
-    // শুরুর সময়ে iframe না থাকলে index=0 প্লে korbe
-    if (!document.getElementById('ytPlayer') && LESSON_IDS.length > 0) {
-        const first = document.querySelector('.lesson-item[data-idx="0"]');
-        if (first) {
-            first.classList.add('active');
-            renderPlayer(LESSON_IDS[0]);
+    // --- Auto load ---
+    let startId = initialId;
+    if (!startId) {
+        // প্রথম play-able আইটেম নাও (অথবা admin হলে প্রথম যেটা)
+        const firstPlayable = document.querySelector('.lesson-item[data-canplay="true"]')
+            || (isAdmin ? document.querySelector('.lesson-item') : null);
+
+        if (firstPlayable) {
+            startId = firstPlayable.getAttribute('data-yt') || idByIndex(firstPlayable.getAttribute('data-idx'));
+            firstPlayable.classList.add('active');
         }
     }
-
+    if (startId) renderPlayer(startId);
 })();

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOCS", "BOCS\BOCS.csproj", "{E5D90B14-4728-4D50-8976-E05C5E9A05AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BOCS", "BOCS\BOCS.csproj", "{E5D90B14-4728-4D50-8976-E05C5E9A05AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

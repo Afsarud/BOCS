@@ -31,7 +31,16 @@
                     <input asp-for="PriceBdt" class="form-control" type="number" min="0" step="1" />
                     <span asp-validation-for="PriceBdt" class="text-danger"></span>
                 </div>
-
+                <!-- ✅ নতুন: Course Type dropdown (1=Full, 2=Half) -->
+                <div class="mb-3" style="max-width: 320px;">
+                    <label asp-for="CourseType" class="form-label"></label>
+                    <select asp-for="CourseType"
+                            class="form-select"
+                            asp-items="Html.GetEnumSelectList<BOCS.Models.CourseType>()">
+                        <option value="">-- Select --</option>
+                    </select>
+                    <span asp-validation-for="CourseType" class="text-danger"></span>
+                </div>
                 <div class="mb-3">
                     <label class="form-label">Thumbnail</label>
                     <div class="d-flex align-items-center gap-3">

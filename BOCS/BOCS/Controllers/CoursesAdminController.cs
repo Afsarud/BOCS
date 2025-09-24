@@ -39,20 +39,30 @@ namespace BOCS.Controllers
                 .ToListAsync());
         }
 
+        //[HttpGet("create")]
+        //public IActionResult Create() => View(new Course { IsActive = true });
         [HttpGet("create")]
-        public IActionResult Create() => View(new Course { IsActive = true });
-        
+        public IActionResult Create()
+        {
+            return View(new Course { IsActive = true, CourseType = CourseType.Full });
+        }
         [HttpPost("create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,IsActive,DurationDays,PriceBdt")] Course model, IFormFile? thumbnail)
+        public async Task<IActionResult> Create(
+            [Bind("Title,IsActive,DurationDays,PriceBdt,CourseType")] Course model,
+            IFormFile? thumbnail)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
             if (thumbnail != null && thumbnail.Length > 0)
             {
                 var saved = await SaveImageAsync(thumbnail);
-                if (saved == null) return View(model); // ModelState-এ error সেট হয়ে গেছে
+                if (saved == null) return View(model); // ধরে নিচ্ছি SaveImageAsync ModelState-এ error বসায়
                 model.ThumbnailUrl = saved;
+                model.ThumbnailOriginalName = thumbnail.FileName;
             }
 
             _db.Courses.Add(model);
@@ -60,6 +70,25 @@ namespace BOCS.Controllers
             TempData["StatusMessage"] = "✅ Course created.";
             return RedirectToAction(nameof(Index));
         }
+
+        //[HttpPost("create")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("Title,IsActive,DurationDays,PriceBdt")] Course model, IFormFile? thumbnail)
+        //{
+        //    if (!ModelState.IsValid) return View(model);
+
+        //    if (thumbnail != null && thumbnail.Length > 0)
+        //    {
+        //        var saved = await SaveImageAsync(thumbnail);
+        //        if (saved == null) return View(model); // ModelState-এ error সেট হয়ে গেছে
+        //        model.ThumbnailUrl = saved;
+        //    }
+
+        //    _db.Courses.Add(model);
+        //    await _db.SaveChangesAsync();
+        //    TempData["StatusMessage"] = "✅ Course created.";
+        //    return RedirectToAction(nameof(Index));
+        //}
 
         [HttpGet("edit/{id:int}")]
         public async Task<IActionResult> Edit(int id)
@@ -71,7 +100,7 @@ namespace BOCS.Controllers
 
         [HttpPost("edit/{id:int}")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,IsActive,ThumbnailUrl,DurationDays,PriceBdt")] Course model, IFormFile? thumbnail)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,IsActive,ThumbnailUrl,DurationDays,PriceBdt,CourseType")] Course model, IFormFile? thumbnail)
         {
             if (id != model.Id) return BadRequest();
             if (!ModelState.IsValid) return View(model);
@@ -83,7 +112,7 @@ namespace BOCS.Controllers
             entity.IsActive = model.IsActive;
             entity.DurationDays = model.DurationDays;
             entity.PriceBdt = model.PriceBdt;
-
+            entity.CourseType = model.CourseType;
             if (thumbnail != null && thumbnail.Length > 0)
             {
                 // নতুন ফাইল সেভ

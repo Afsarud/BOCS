@@ -70,21 +70,6 @@ namespace BOCS.Controllers
 
             return View(vm);
         }
-        //only active course shown
-        //public IActionResult Index(string? q)
-        //{
-        //    var query = _db.Courses.AsQueryable();
-
-        //    if (!string.IsNullOrWhiteSpace(q))
-        //        query = query.Where(c => c.Title.Contains(q));
-
-        //    // কেবল Active course
-        //    query = query.Where(c => c.IsActive);
-
-        //    var model = query.OrderBy(c => c.Title).ToList();
-        //    return View(model);
-        //}
-        //all courses shown
 
         public async Task<IActionResult> Index(string? q)
         {
@@ -96,7 +81,7 @@ namespace BOCS.Controllers
             query = query.Where(c => c.IsActive);
 
             var list = await query
-                .OrderBy(c => c.Title)
+                .OrderBy(c => c.Id)
                 .Select(c => new CourseCatalogItemVM
                 {
                     Id = c.Id,
@@ -104,6 +89,7 @@ namespace BOCS.Controllers
                     ThumbnailUrl = c.ThumbnailUrl,
                     DurationDays = c.DurationDays,
                     PriceBdt = c.PriceBdt,
+                    CourseType = c.CourseType,
                     NotificationCount = 0
                 })
                 .ToListAsync();
@@ -114,17 +100,16 @@ namespace BOCS.Controllers
 
         public async Task<IActionResult> Info(int id)
         {
-            var course = await _db.Courses.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+            var course = await _db.Courses.AsNoTracking()
+                .FirstOrDefaultAsync(c => c.Id == id);
             if (course == null) return NotFound();
 
-            // সব প্রকাশিত লেসন lessons
             var lessons = await _db.Lessons.AsNoTracking()
                 .Where(l => l.CourseId == id && l.IsPublished)
                 .OrderBy(l => l.SortOrder)
-                .Select(l => new { l.Title, l.YoutubeId, l.SubjectId })
+                .Select(l => new { l.Id, l.Title, l.YoutubeId, l.SubjectId, l.IsPlay })
                 .ToListAsync();
 
-            // সব প্রকাশিত Subject
             var subjects = await _db.Subjects.AsNoTracking()
                 .Where(s => s.CourseId == id && s.IsPublished)
                 .OrderBy(s => s.SortOrder)
@@ -132,7 +117,6 @@ namespace BOCS.Controllers
                 .ToListAsync();
 
             var outlines = new List<OutlineGroupVM>();
-
             foreach (var s in subjects)
             {
                 outlines.Add(new OutlineGroupVM
@@ -143,8 +127,6 @@ namespace BOCS.Controllers
                                    .ToList()
                 });
             }
-
-            // Subject ছাড়া যেগুলো আছে – “Other lessons”
             var orphans = lessons.Where(x => x.SubjectId == null).ToList();
             if (orphans.Count > 0)
             {
@@ -155,7 +137,18 @@ namespace BOCS.Controllers
                 });
             }
 
-            var vm = new CourseInfoVM
+            // ytId => IsPlay map (ভিউতে data-attribute বানাতে)
+            ViewBag.LessonPlay = lessons
+                .GroupBy(x => x.YoutubeId)
+                .ToDictionary(g => g.Key, g => g.Any(z => z.IsPlay));
+
+            // প্রথম play-able yt id (থাকলে)
+            string? firstPlayableId = lessons
+                .Where(x => x.IsPlay)
+                .Select(x => x.YoutubeId)
+                .FirstOrDefault();
+
+            return View(new CourseInfoVM
             {
                 Id = course.Id,
                 Title = course.Title,
@@ -164,10 +157,9 @@ namespace BOCS.Controllers
                 PriceBdt = course.PriceBdt,
                 CreatedBy = "Admin",
                 Outlines = outlines,
-                LatestYoutubeId = lessons.FirstOrDefault()?.YoutubeId
-            };
-
-            return View(vm);
+                // ভিউতে initialId হিসেবে আমরা আলাদা স্ক্রিপ্টে দেব
+                LatestYoutubeId = firstPlayableId
+            });
         }
 
         [HttpGet]
@@ -176,16 +168,22 @@ namespace BOCS.Controllers
             var course = await _db.Courses
                 .AsNoTracking()
                 .Where(c => c.Id == id)
-                .Select(c => new { c.Id, c.Title, c.PriceBdt })
+                .Select(c => new { c.Id, c.Title, c.PriceBdt, c.DurationDays })
                 .FirstOrDefaultAsync();
 
             if (course == null) return NotFound();
+
+            var start = TodayBd();
+            var end = start.AddDays(Math.Max(course.DurationDays, 1) - 1); // inclusive
 
             var vm = new EnrollmentCreateVM
             {
                 CourseId = course.Id,
                 CourseTitle = course.Title,
-                CoursePriceBdt = course.PriceBdt
+                CoursePriceBdt = course.PriceBdt,
+                CourseDurationDays = course.DurationDays,
+                StartDate = start,
+                EndDate = end
             };
             return View(vm);
         }
@@ -195,15 +193,18 @@ namespace BOCS.Controllers
         {
             if (!ModelState.IsValid) return View(vm);
 
-            var course = await _db.Courses.AsNoTracking().FirstOrDefaultAsync(x => x.Id == vm.CourseId);
+            var course = await _db.Courses.AsNoTracking()
+                            .FirstOrDefaultAsync(x => x.Id == vm.CourseId);
             if (course == null) return NotFound();
 
-            var userId = _userManager.GetUserId(User);
+            // trust user's StartDate (from date picker), but compute EndDate here
+            var start = vm.StartDate.Date;
+            var end = start.AddDays(Math.Max(course.DurationDays, 1) - 1);
 
             var enroll = new CourseEnrollment
             {
                 CourseId = vm.CourseId,
-                StudentId = userId,
+                StudentId = _userManager.GetUserId(User)!,
                 CreatedAt = DateTime.UtcNow,
                 AccessType = vm.Access,
                 PaymentMethod = vm.PaymentMethod,
@@ -211,6 +212,8 @@ namespace BOCS.Controllers
                 SenderNumber = vm.SenderNumber,
                 MobileNumber = vm.MobileNumber,
                 PriceAtEnrollment = course.PriceBdt,
+                StartDate = start,
+                EndDate = end,
                 IsApproved = false,
                 IsArchived = false
             };
@@ -218,8 +221,15 @@ namespace BOCS.Controllers
             _db.Enrollments.Add(enroll);
             await _db.SaveChangesAsync();
 
-            TempData["StatusMessage"] = "✅ Enrollment submitted. We will review your payment.";
-            return RedirectToAction(nameof(Info), new { id = vm.CourseId });
+            TempData["StatusMessage"] = "✅ Enrollment created (Pending).";
+            return RedirectToAction(nameof(Index), new { id = vm.CourseId  });
         }
+
+        private static DateTime TodayBd()
+        {
+            var tz = TimeZoneInfo.FindSystemTimeZoneById("Asia/Dhaka");
+            return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tz).Date;
+        }
+
     }
 }
