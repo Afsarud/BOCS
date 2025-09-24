@@ -10,6 +10,7 @@ namespace BOCS.Models
         public bool IsActive { get; set; } = true;
         [StringLength(512)]
         public string? ThumbnailUrl { get; set; }
+        public string? ThumbnailOriginalName { get; set; }
         public int DurationDays { get; set; }
         public int PriceBdt { get; set; }
         [StringLength(20)]

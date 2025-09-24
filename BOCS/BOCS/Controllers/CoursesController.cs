@@ -70,12 +70,30 @@ namespace BOCS.Controllers
 
             return View(vm);
         }
+        //only active course shown
+        //public IActionResult Index(string? q)
+        //{
+        //    var query = _db.Courses.AsQueryable();
+
+        //    if (!string.IsNullOrWhiteSpace(q))
+        //        query = query.Where(c => c.Title.Contains(q));
+
+        //    // কেবল Active course
+        //    query = query.Where(c => c.IsActive);
+
+        //    var model = query.OrderBy(c => c.Title).ToList();
+        //    return View(model);
+        //}
+        //all courses shown
+
         public async Task<IActionResult> Index(string? q)
         {
-            var query = _db.Courses.AsNoTracking();
+            var query = _db.Courses.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(q))
                 query = query.Where(c => c.Title.Contains(q));
+            // কেবল Active course
+            query = query.Where(c => c.IsActive);
 
             var list = await query
                 .OrderBy(c => c.Title)
@@ -84,7 +102,7 @@ namespace BOCS.Controllers
                     Id = c.Id,
                     Title = c.Title,
                     ThumbnailUrl = c.ThumbnailUrl,
-                    DurationDays =c.DurationDays,
+                    DurationDays = c.DurationDays,
                     PriceBdt = c.PriceBdt,
                     NotificationCount = 0
                 })

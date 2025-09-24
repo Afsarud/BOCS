@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BOCS.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/png" href="~/images/logo.png" />
-    @* @RenderSection("Styles", required: false)  *@
+    @RenderSection("Styles", required: false) 
 </head>
 <body class="@(isCoursesIndex ? "block-copy" : "")">
     <header>
@@ -62,7 +62,7 @@
                                         <a class="dropdown-item d-flex justify-content-between align-items-center"
                                            asp-controller="MyCourses" asp-action="InProgressIndex">
                                             In Progress
-                                           @*  চাইলে কাউন্ট দেখাতে পারেন: *@
+                                            @* চাইলে কাউন্ট দেখাতে পারেন: *@
                                         <span class="badge rounded-pill bg-secondary">@ViewBag.InProgressCount</span>
                                         </a>
                                     </li>

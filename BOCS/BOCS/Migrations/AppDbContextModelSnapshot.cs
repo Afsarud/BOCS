@@ -47,6 +47,9 @@ namespace BOCS.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(5000);
 
+                    b.Property<string>("ThumbnailOriginalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ThumbnailUrl")
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
