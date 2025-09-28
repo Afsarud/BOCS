@@ -3,7 +3,8 @@
 @{
     ViewData["Title"] = "Course Info";
     var playMap = ViewBag.LessonPlay as IDictionary<string, bool> ?? new Dictionary<string, bool>();
-    bool isPrivileged = User.IsInRole("Admin") || User.IsInRole("Teacher");
+    var isEnrolled = (bool)ViewBag.isEnrolled;
+    bool isAdmin = User.IsInRole("Admin");
     var idx = 0;
 
     // initialId: Controller থেকে এলো (শুধু play-able হলে সেট করা)
@@ -37,6 +38,10 @@
                                     {
                                         var yt = item.YoutubeId ?? "";
                                         var canPlay = playMap.TryGetValue(yt, out var v) && v;
+                                        if (!isEnrolled)
+                                        {
+                                            canPlay = false;
+                                        }
                                         var isActive = yt == initialId;
 
                                         <li class="list-group-item d-flex justify-content-between align-items-center lesson-item @(isActive ? "active" : "") @(canPlay ? "" : "disabled-lesson")"
@@ -90,14 +95,7 @@
     </div>
 </section>
 
-@{
-    bool isStudent = User.IsInRole("Student");
-    bool isTeacher = User.IsInRole("Teacher");
-    bool isAdmin = User.IsInRole("Admin");
-
-    string roleFlag = isStudent ? "student" : "teacher";
-}
-<input type="hidden" id="USER_ROLE" value="@roleFlag" />
+<input type="hidden" id="IS_ADMIN_FLAG" value="@(isAdmin ? "true" : "false")" />
 
 <style>
     .disabled-lesson {
