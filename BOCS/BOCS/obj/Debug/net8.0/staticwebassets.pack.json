@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Account.css"
     },
     {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\course-lesson-manage.css",
+      "PackagePath": "staticwebassets\\css\\course-lesson-manage.css"
+    },
+    {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -99,6 +103,14 @@
     {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-info.js",
       "PackagePath": "staticwebassets\\js\\course-info.js"
+    },
+    {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-lesson-manage.js",
+      "PackagePath": "staticwebassets\\js\\course-lesson-manage.js"
+    },
+    {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-play-guard.js",
+      "PackagePath": "staticwebassets\\js\\course-play-guard.js"
     },
     {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
@@ -345,12 +357,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\39cf8d6fd4764722bd6eaf906dcf10cd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\courses\\39cf8d6fd4764722bd6eaf906dcf10cd.jpg"
+    },
+    {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg",
       "PackagePath": "staticwebassets\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg"
     },
     {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\782d2795fed345de818729153ce6550c.jpg",
       "PackagePath": "staticwebassets\\uploads\\courses\\782d2795fed345de818729153ce6550c.jpg"
+    },
+    {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a0017c5eca274b869b163c14128e4fb2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\courses\\a0017c5eca274b869b163c14128e4fb2.jpg"
     },
     {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a4eac76386c84d3997001f183a2ee27e.jpg",
@@ -367,10 +387,6 @@
     {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\e26492b64d8c4160983faaeca9e42705.jpg",
       "PackagePath": "staticwebassets\\uploads\\courses\\e26492b64d8c4160983faaeca9e42705.jpg"
-    },
-    {
-      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\f6de864a65d742f69fe036b475d9916d.jpg",
-      "PackagePath": "staticwebassets\\uploads\\courses\\f6de864a65d742f69fe036b475d9916d.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BOCS.Microsoft.AspNetCore.StaticWebAssets.props",

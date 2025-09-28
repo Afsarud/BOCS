@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Course Info";
     var playMap = ViewBag.LessonPlay as IDictionary<string, bool> ?? new Dictionary<string, bool>();
-    bool isAdmin = User.IsInRole("Admin");
+    bool isPrivileged = User.IsInRole("Admin") || User.IsInRole("Teacher");
     var idx = 0;
 
     // initialId: Controller থেকে এলো (শুধু play-able হলে সেট করা)
@@ -89,7 +89,15 @@
         </div>
     </div>
 </section>
-<input type="hidden" id="IS_ADMIN_FLAG" value="@(isAdmin ? "true" : "false")" />
+
+@{
+    bool isStudent = User.IsInRole("Student");
+    bool isTeacher = User.IsInRole("Teacher");
+    bool isAdmin = User.IsInRole("Admin");
+
+    string roleFlag = isStudent ? "student" : "teacher";
+}
+<input type="hidden" id="USER_ROLE" value="@roleFlag" />
 
 <style>
     .disabled-lesson {

@@ -3,32 +3,80 @@
   "WorkspaceRootPath": "E:\\BOCSSoursetree\\BOCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\coursesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\coursesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\wwwroot\\js\\single-tab-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\wwwroot\\js\\single-tab-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\coursesadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\coursesadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\mycoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\mycoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\coursesadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\coursesadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\models\\ientityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\models\\ientityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\adminenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\adminenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\wwwroot\\js\\course-play-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\wwwroot\\js\\course-play-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\wwwroot\\js\\course-info.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\wwwroot\\js\\course-info.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\courses\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\courses\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\wwwroot\\js\\single-tab-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\wwwroot\\js\\single-tab-guard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\wwwroot\\js\\protect-course-info.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\wwwroot\\js\\protect-course-info.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\models\\courselesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\models\\courselesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\models\\courseenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\models\\courseenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\views\\adminenrollments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\views\\adminenrollments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|e:\\bocssoursetree\\bocs\\bocs\\migrations\\20250922180917_addtictocourseenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5D90B14-4728-4D50-8976-E05C5E9A05AC}|BOCS\\BOCS.csproj|solutionrelative:bocs\\migrations\\20250922180917_addtictocourseenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "single-tab-guard.js",
               "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\single-tab-guard.js",
               "RelativeDocumentMoniker": "BOCS\\wwwroot\\js\\single-tab-guard.js",
               "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\single-tab-guard.js",
               "RelativeToolTip": "BOCS\\wwwroot\\js\\single-tab-guard.js",
-              "ViewState": "AQIAAAIAAAAAAAAAAADwvx0AAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-09-12T02:56:18.99Z",
               "IsPinned": true,
@@ -56,41 +104,201 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\CoursesAdmin\\Create.cshtml",
-              "RelativeDocumentMoniker": "BOCS\\Views\\CoursesAdmin\\Create.cshtml",
-              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\CoursesAdmin\\Create.cshtml",
-              "RelativeToolTip": "BOCS\\Views\\CoursesAdmin\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-12T19:48:13.88Z",
+              "DocumentIndex": 12,
+              "Title": "protect-course-info.js",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
+              "RelativeDocumentMoniker": "BOCS\\wwwroot\\js\\protect-course-info.js",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
+              "RelativeToolTip": "BOCS\\wwwroot\\js\\protect-course-info.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-13T03:38:54.719Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Course.cs",
-              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "BOCS\\Models\\Course.cs",
-              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\Course.cs",
-              "RelativeToolTip": "BOCS\\Models\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "DocumentIndex": 7,
+              "Title": "AdminEnrollmentsController.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\AdminEnrollmentsController.cs",
+              "RelativeDocumentMoniker": "BOCS\\Controllers\\AdminEnrollmentsController.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\AdminEnrollmentsController.cs",
+              "RelativeToolTip": "BOCS\\Controllers\\AdminEnrollmentsController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAYwE4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T19:39:02.36Z",
+              "WhenOpened": "2025-09-22T17:47:41.423Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\AdminEnrollments\\Index.cshtml",
+              "RelativeDocumentMoniker": "BOCS\\Views\\AdminEnrollments\\Index.cshtml",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\AdminEnrollments\\Index.cshtml",
+              "RelativeToolTip": "BOCS\\Views\\AdminEnrollments\\Index.cshtml",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAgwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T17:48:48.247Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CourseEnrollment.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\CourseEnrollment.cs",
+              "RelativeDocumentMoniker": "BOCS\\Models\\CourseEnrollment.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\CourseEnrollment.cs",
+              "RelativeToolTip": "BOCS\\Models\\CourseEnrollment.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA8wBsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:49:25.401Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "course-play-guard.js",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-play-guard.js",
+              "RelativeDocumentMoniker": "BOCS\\wwwroot\\js\\course-play-guard.js",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-play-guard.js",
+              "RelativeToolTip": "BOCS\\wwwroot\\js\\course-play-guard.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-24T15:27:58.355Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "course-info.js",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-info.js",
+              "RelativeDocumentMoniker": "BOCS\\wwwroot\\js\\course-info.js",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-info.js",
+              "RelativeToolTip": "BOCS\\wwwroot\\js\\course-info.js",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-24T15:29:03.911Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Students\\Index.cshtml",
+              "RelativeDocumentMoniker": "BOCS\\Views\\Students\\Index.cshtml",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Students\\Index.cshtml",
+              "RelativeToolTip": "BOCS\\Views\\Students\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T19:28:57.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CourseLesson.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\CourseLesson.cs",
+              "RelativeDocumentMoniker": "BOCS\\Models\\CourseLesson.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\CourseLesson.cs",
+              "RelativeToolTip": "BOCS\\Models\\CourseLesson.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:21:16.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BOCS\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "BOCS\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:17:02.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "IentityUser.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\IentityUser.cs",
+              "RelativeDocumentMoniker": "BOCS\\Models\\IentityUser.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\IentityUser.cs",
+              "RelativeToolTip": "BOCS\\Models\\IentityUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T18:16:47.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BOCS\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BOCS\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAowCsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T17:50:39.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Users.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "BOCS\\Models\\Users.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Models\\Users.cs",
+              "RelativeToolTip": "BOCS\\Models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T17:30:33.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "BOCS\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "BOCS\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAwwMYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:56:19.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "BOCS\\Controllers\\StudentsController.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "BOCS\\Controllers\\StudentsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIAwwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:15:16.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Info.cshtml",
               "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Courses\\Info.cshtml",
               "RelativeDocumentMoniker": "BOCS\\Views\\Courses\\Info.cshtml",
               "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\Courses\\Info.cshtml",
               "RelativeToolTip": "BOCS\\Views\\Courses\\Info.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-12T19:26:22.403Z",
+              "WhenOpened": "2025-09-24T15:25:29.434Z",
               "EditorCaption": ""
             },
             {
@@ -101,36 +309,35 @@
               "RelativeDocumentMoniker": "BOCS\\Controllers\\CoursesController.cs",
               "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\CoursesController.cs",
               "RelativeToolTip": "BOCS\\Controllers\\CoursesController.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAAwF0AAAAVAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAApwGUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T18:30:13.175Z",
+              "WhenOpened": "2025-09-24T15:24:27.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\CoursesAdmin\\Index.cshtml",
-              "RelativeDocumentMoniker": "BOCS\\Views\\CoursesAdmin\\Index.cshtml",
-              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Views\\CoursesAdmin\\Index.cshtml",
-              "RelativeToolTip": "BOCS\\Views\\CoursesAdmin\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADoAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-12T18:16:17.632Z",
+              "Title": "MyCoursesController.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\MyCoursesController.cs",
+              "RelativeDocumentMoniker": "BOCS\\Controllers\\MyCoursesController.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\MyCoursesController.cs",
+              "RelativeToolTip": "BOCS\\Controllers\\MyCoursesController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAtwBMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T18:09:37.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoursesAdminController.cs",
-              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\CoursesAdminController.cs",
-              "RelativeDocumentMoniker": "BOCS\\Controllers\\CoursesAdminController.cs",
-              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Controllers\\CoursesAdminController.cs",
-              "RelativeToolTip": "BOCS\\Controllers\\CoursesAdminController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAvwB0AAAAIAAAA",
+              "DocumentIndex": 18,
+              "Title": "20250922180917_AddTicToCourseEnrollment.cs",
+              "DocumentMoniker": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Migrations\\20250922180917_AddTicToCourseEnrollment.cs",
+              "RelativeDocumentMoniker": "BOCS\\Migrations\\20250922180917_AddTicToCourseEnrollment.cs",
+              "ToolTip": "E:\\BOCSSoursetree\\BOCS\\BOCS\\Migrations\\20250922180917_AddTicToCourseEnrollment.cs",
+              "RelativeToolTip": "BOCS\\Migrations\\20250922180917_AddTicToCourseEnrollment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T18:16:06.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T18:09:17.697Z"
             }
           ]
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/UpA0TJs0Hios+OmxEaVG1f35xgf6ohriRtetut4v3I=",
+  "Hash": "MDXlGXy3b5qHyEVf2M/j2ujJm2u0wRskhcM5Wd37vDk=",
   "Source": "BOCS",
   "BasePath": "_content/BOCS",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Account.css"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\course-lesson-manage.css",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "css/course-lesson-manage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\course-lesson-manage.css"
     },
     {
       "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\site.css",
@@ -509,6 +528,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\course-info.js"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-lesson-manage.js",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "js/course-lesson-manage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\course-lesson-manage.js"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\course-play-guard.js",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "js/course-play-guard.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\course-play-guard.js"
     },
     {
       "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\js\\protect-course-info.js",
@@ -1670,6 +1727,25 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\39cf8d6fd4764722bd6eaf906dcf10cd.jpg",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "uploads/courses/39cf8d6fd4764722bd6eaf906dcf10cd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\courses\\39cf8d6fd4764722bd6eaf906dcf10cd.jpg"
+    },
+    {
       "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\429be762e39848bcbab7520cbdd651a4.jpg",
       "SourceId": "BOCS",
       "SourceType": "Discovered",
@@ -1706,6 +1782,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\courses\\782d2795fed345de818729153ce6550c.jpg"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a0017c5eca274b869b163c14128e4fb2.jpg",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "uploads/courses/a0017c5eca274b869b163c14128e4fb2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\courses\\a0017c5eca274b869b163c14128e4fb2.jpg"
     },
     {
       "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\a4eac76386c84d3997001f183a2ee27e.jpg",
@@ -1782,25 +1877,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\courses\\e26492b64d8c4160983faaeca9e42705.jpg"
-    },
-    {
-      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\uploads\\courses\\f6de864a65d742f69fe036b475d9916d.jpg",
-      "SourceId": "BOCS",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
-      "BasePath": "_content/BOCS",
-      "RelativePath": "uploads/courses/f6de864a65d742f69fe036b475d9916d.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\courses\\f6de864a65d742f69fe036b475d9916d.jpg"
     }
   ]
 }
