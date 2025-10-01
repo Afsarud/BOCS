@@ -1,20 +1,10 @@
 ﻿(function () {
-    // 1. পুরো ওয়েবপেজে রাইট-ক্লিক বন্ধ
+    // Full page right click block
     document.addEventListener('contextmenu', function (e) {
         e.preventDefault();
-        return false;
     }, true);
 
-    // 2. ভিডিও শেল / ফ্রেমে রাইট-ক্লিকও বন্ধ
-    const videoShell = document.getElementById('videoShell');
-    if (videoShell) {
-        videoShell.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            return false;
-        }, true);
-    }
-
-    // 3. শর্টকাট কী ব্লক (Inspect, View Source, Save ইত্যাদি)
+    // Inspect / Save Source / F12 ইত্যাদি block
     document.addEventListener('keydown', function (e) {
         const k = (e.key || '').toLowerCase();
         const ctrl = e.ctrlKey || e.metaKey;
@@ -26,11 +16,18 @@
         }
     }, true);
 
-    // 4. Drag করে কিছু নেওয়া বন্ধ
+    // Drag বন্ধ
     document.addEventListener('dragstart', function (e) {
         e.preventDefault();
-        return false;
     }, true);
+
+    // Guard div এও right click block
+    const guard = document.getElementById("videoGuard");
+    if (guard) {
+        guard.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, true);
+    }
 })();
 
 

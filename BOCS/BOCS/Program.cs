@@ -40,7 +40,6 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.SameSite = SameSiteMode.Strict;
 });
 
-
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDataProtection().UseEphemeralDataProtectionProvider();
@@ -61,33 +60,41 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-// ---------- Security headers + CSP (ONE place, BEFORE static files) ----------
+// ---------- Security headers + CSP (BEFORE static files) ----------
 app.Use(async (ctx, next) =>
 {
+    // Basic security headers
+    ctx.Response.Headers["X-Content-Type-Options"] = "nosniff";
+    ctx.Response.Headers["X-Frame-Options"] = "DENY";
+    ctx.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
+    ctx.Response.Headers["X-XSS-Protection"] = "0"; // modern browsers ignore/obsolete
     ctx.Response.Headers["Cache-Control"] = "no-store, no-cache, must-revalidate";
     ctx.Response.Headers["Pragma"] = "no-cache";
-    ctx.Response.Headers["X-Content-Type-Options"] = "nosniff";
+
+    // CSP: YouTube + gstatic allowed; nocookie used by player
+    // Note: style-src 'unsafe-inline' রাখা হয়েছে Bootstrap inline styles-এর জন্য।
+    var cspBase =
+        "default-src 'self'; " +
+        "img-src 'self' data: https://i.ytimg.com https:; " +
+        "style-src 'self' 'unsafe-inline'; " +
+        "font-src 'self' data:; " +
+        "script-src 'self' https://www.youtube.com https://www.gstatic.com https://www.youtube-nocookie.com; " +
+        "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; " +
+        "child-src https://www.youtube.com https://www.youtube-nocookie.com; " +
+        "media-src 'self' blob:; " +
+        "worker-src 'self' blob:; ";
 
     if (app.Environment.IsDevelopment())
     {
-        ctx.Response.Headers["Content-Security-Policy"] =
-            "default-src 'self'; " +
-            "img-src 'self' data: https://i.ytimg.com https:; " +
-            "style-src 'self'; " +             
-            "script-src 'self'; " +             
-            "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; " +
-            "connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:*;";
+        // Dev: allow localhost/ws for Hot Reload/webpack etc.
+        cspBase += "connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:*;";
     }
     else
     {
-        ctx.Response.Headers["Content-Security-Policy"] =
-            "default-src 'self'; " +
-            "img-src 'self' data: https://i.ytimg.com; " +
-            "style-src 'self'; " +
-            "script-src 'self'; " +
-            "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; " +
-            "connect-src 'self';";
+        cspBase += "connect-src 'self';";
     }
+
+    ctx.Response.Headers["Content-Security-Policy"] = cspBase;
 
     await next();
 });
