@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BOCS.Controllers
 {
@@ -48,10 +49,24 @@ namespace BOCS.Controllers
                     isPersistent: false,    
                     lockoutOnFailure: true  
                 );
-
+                // Start user login check 
                 if (result.Succeeded)
-                    return LocalRedirect(returnUrl ?? Url.Action("Index", "Home")!);
+                {
+                    // Generate new session ID for single active session
+                    var sessionId = Guid.NewGuid().ToString();
+                    user.CurrentSessionId = sessionId;
+                    await userManager.UpdateAsync(user);
 
+                    // Add session ID to claims
+                    var claims = new List<Claim>
+                    {
+                        new Claim("SessionId", sessionId)
+                    };
+                    await signInManager.SignInWithClaimsAsync(user, isPersistent: false, claims);
+
+                    return LocalRedirect(returnUrl ?? Url.Action("Index", "Home")!);
+                }
+                // End user login check 
                 if (result.IsLockedOut)
                 {
                     ModelState.AddModelError(string.Empty, "Account locked. Please try later.");
@@ -67,6 +82,17 @@ namespace BOCS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
+            // Clear session ID from database
+            var userId = userManager.GetUserId(User);
+            if (!string.IsNullOrEmpty(userId))
+            {
+                var user = await userManager.FindByIdAsync(userId);
+                if (user != null)
+                {
+                    user.CurrentSessionId = null;
+                    await userManager.UpdateAsync(user);
+                }
+            }
             await signInManager.SignOutAsync();
             await HttpContext.SignOutAsync(IdentityConstants.ApplicationScheme);
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
@@ -78,6 +104,16 @@ namespace BOCS.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Logout(string? reason = null)
         {
+            var userId = userManager.GetUserId(User);
+            if (!string.IsNullOrEmpty(userId))
+            {
+                var user = await userManager.FindByIdAsync(userId);
+                if (user != null)
+                {
+                    user.CurrentSessionId = null;
+                    await userManager.UpdateAsync(user);
+                }
+            }
             await signInManager.SignOutAsync();
             TempData["LogoutReason"] = reason;
             return RedirectToAction("Login", "Account");

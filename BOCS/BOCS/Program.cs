@@ -97,7 +97,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); 
+app.UseAuthentication();
+app.UseMiddleware<BOCS.Middleware.SingleSessionMiddleware>();
 app.UseAuthorization();
 
 app.MapControllerRoute(
