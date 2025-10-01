@@ -78,6 +78,14 @@
         document.querySelectorAll('.lesson-item.active').forEach(x => x.classList.remove('active'));
         li.classList.add('active');
 
+        // ✅ SubjectName | LessonName show করো
+        const subject = li.getAttribute('data-subject') || "";
+        const lesson = li.getAttribute('data-lesson') || "";
+        const titleEl = document.getElementById('lessonTitle');
+        if (titleEl) {
+            titleEl.textContent = subject && lesson ? ` ${subject} | ${lesson}` : "";
+        }
+
         renderPlayer(id);
     });
 

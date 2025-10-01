@@ -46,6 +46,8 @@
 
                                         <li class="list-group-item d-flex justify-content-between align-items-center lesson-item @(isActive ? "active" : "") @(canPlay ? "" : "disabled-lesson")"
                                             data-idx="@idx" data-yt="@yt" data-canplay="@(canPlay.ToString().ToLower())"
+                                            data-subject="@g.Title"
+                                            data-lesson="@item.Label"
                                             role="button" tabindex="0">
                                             <span class="text-truncate">@item.Label</span>
                                             <i class="bi bi-play-circle"></i>
@@ -83,7 +85,9 @@
 
             <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
-                    <h4 class="mb-2">@Model.Title</h4>
+                    <h4 class="mb-2">
+                        <span id="lessonTitle"></span>
+                    </h4>
                     <div class="text-muted">Created by: @Model.CreatedBy</div>
                 </div>
                 <div class="text-end">
@@ -132,6 +136,9 @@
 @model BOCS.ModelsView.CourseInfoVM
 @{
     ViewData["Title"] = "Course Info";
+    var playMap = ViewBag.LessonPlay as IDictionary<string, bool> ?? new Dictionary<string, bool>();
+    var isEnrolled = (bool)ViewBag.isEnrolled;
+    bool isAdmin = User.IsInRole("Admin");
 
     var initialId = !string.IsNullOrWhiteSpace(Model.LatestYoutubeId)
         ? Model.LatestYoutubeId
@@ -165,12 +172,26 @@
                                 <ul class="list-group list-group-flush">
                                     @foreach (var item in g.Items)
                                     {
+                                        var yt = item.YoutubeId ?? "";
+                                        var canPlay = playMap.TryGetValue(yt, out var v) && v;
+                                        if (!isEnrolled)
+                                        {
+                                            canPlay = false;
+                                        }
                                         var isActive = item.YoutubeId == initialId;
-                                        <li class="list-group-item d-flex justify-content-between align-items-center lesson-item @(isActive ? "active" : "")"
-                                            data-idx="@idx" data-yt="@item.YoutubeId" role="button" tabindex="0">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center lesson-item @(isActive ? "active" : "") @(canPlay ? "" : "disabled-lesson")"
+                                            data-idx="@idx" data-yt="@yt" data-canplay="@(canPlay.ToString().ToLower())"
+                                            data-subject="@g.Title"
+                                            data-lesson="@item.Label"
+                                            role="button" tabindex="0">
                                             <span class="text-truncate">@item.Label</span>
                                             <i class="bi bi-play-circle"></i>
                                         </li>
+                                        // <li class="list-group-item d-flex justify-content-between align-items-center lesson-item @(isActive ? "active" : "")"
+                                        //     data-idx="@idx" data-yt="@item.YoutubeId" role="button" tabindex="0">
+                                        //     <span class="text-truncate">@item.Label</span>
+                                        //     <i class="bi bi-play-circle"></i>
+                                        // </li>
                                         idx++;
                                     }
                                 </ul>
@@ -227,4 +248,4 @@
     <script id="INITIAL_ID" type="application/json">
         @Html.Raw(JsonSerializer.Serialize(initialId ?? ""))
     </script>
-} *@
+}  *@
