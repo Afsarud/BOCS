@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Account.css"
     },
     {
+      "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\Protect-course-info.css",
+      "PackagePath": "staticwebassets\\css\\Protect-course-info.css"
+    },
+    {
       "Id": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\course-lesson-manage.css",
       "PackagePath": "staticwebassets\\css\\course-lesson-manage.css"
     },

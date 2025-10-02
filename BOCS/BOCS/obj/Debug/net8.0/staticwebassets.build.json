@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MDXlGXy3b5qHyEVf2M/j2ujJm2u0wRskhcM5Wd37vDk=",
+  "Hash": "CzR+EifUXg7dgGwfxTy8OeNYVI+ddq5w4n+7/vo+EwE=",
   "Source": "BOCS",
   "BasePath": "_content/BOCS",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\course-lesson-manage.css"
+    },
+    {
+      "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\Protect-course-info.css",
+      "SourceId": "BOCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\",
+      "BasePath": "_content/BOCS",
+      "RelativePath": "css/Protect-course-info.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Protect-course-info.css"
     },
     {
       "Identity": "E:\\BOCSSoursetree\\BOCS\\BOCS\\wwwroot\\css\\site.css",
