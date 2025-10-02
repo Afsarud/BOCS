@@ -49,15 +49,13 @@ namespace BOCS.Controllers
                     isPersistent: false,    
                     lockoutOnFailure: true  
                 );
-                // Start user login check 
+              
                 if (result.Succeeded)
                 {
-                    // Generate new session ID for single active session
                     var sessionId = Guid.NewGuid().ToString();
                     user.CurrentSessionId = sessionId;
                     await userManager.UpdateAsync(user);
 
-                    // Add session ID to claims
                     var claims = new List<Claim>
                     {
                         new Claim("SessionId", sessionId)
@@ -66,7 +64,6 @@ namespace BOCS.Controllers
 
                     return LocalRedirect(returnUrl ?? Url.Action("Index", "Home")!);
                 }
-                // End user login check 
                 if (result.IsLockedOut)
                 {
                     ModelState.AddModelError(string.Empty, "Account locked. Please try later.");
@@ -82,7 +79,6 @@ namespace BOCS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            // Clear session ID from database
             var userId = userManager.GetUserId(User);
             if (!string.IsNullOrEmpty(userId))
             {

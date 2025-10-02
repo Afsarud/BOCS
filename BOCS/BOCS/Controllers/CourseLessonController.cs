@@ -9,10 +9,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BOCS.Controllers
 {
-   // Admin only: manage lessons under a course
     [Authorize(Roles = "Admin,Teacher")]
     [Route("admin/course-lessons")]
-    [AutoValidateAntiforgeryToken] // POST এ টোকেন চাই
+    [AutoValidateAntiforgeryToken] 
     public class CourseLessonController : Controller
     {
         private readonly AppDbContext _db;
@@ -66,7 +65,7 @@ namespace BOCS.Controllers
             return View("Manage", vm);
         }
 
-        [HttpPost("tick")]   // POST /admin/course-lessons/tick?courseId=20
+        [HttpPost("tick")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Tick(int courseId, [FromBody] TickDto dto)
         {
@@ -90,8 +89,6 @@ namespace BOCS.Controllers
         {
             var course = await _db.Courses.AsNoTracking().FirstOrDefaultAsync(c => c.Id == courseId);
             if (course == null) return NotFound();
-
-            // next sort = max + 1 (খালি হলে 0)
             var max = await _db.Lessons
                 .Where(l => l.CourseId == courseId)
                 .Select(l => (int?)l.SortOrder)
@@ -249,8 +246,6 @@ namespace BOCS.Controllers
             return RedirectToAction(nameof(Manage), new { courseId });
         }
 
-        //drag and drop start
-
         public class ReorderDto
         {
             public List<int> Ids { get; set; } = new();
@@ -271,7 +266,7 @@ namespace BOCS.Controllers
                 return BadRequest("Mismatched ids");
 
             for (int i = 0; i < dto.Ids.Count; i++)
-                lessons.First(x => x.Id == dto.Ids[i]).SortOrder = i; // অথবা i+1
+                lessons.First(x => x.Id == dto.Ids[i]).SortOrder = i; 
 
             await _db.SaveChangesAsync();
             return Ok(new { updated = lessons.Count });

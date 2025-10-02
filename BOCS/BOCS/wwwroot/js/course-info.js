@@ -54,7 +54,6 @@ function onYouTubeIframeAPIReady() {
 }
 window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
-// Lesson click -> load
 function idByIndex(idx) {
     const i = parseInt(idx, 10);
     if (Number.isNaN(i) || i < 0 || i >= LESSON_IDS.length) return "";
@@ -87,7 +86,6 @@ document.addEventListener('click', function (e) {
     }
 });
 
-// Keyboard
 document.addEventListener('keydown', function (e) {
     if ((e.key === 'Enter' || e.key === ' ') && document.activeElement?.classList.contains('lesson-item')) {
         e.preventDefault();
